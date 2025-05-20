@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family:Impact, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif
+}
+
+body {
+    background-image: url('/PaginaLogin/ImagensLogin/OnePiece.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+#login{
+    margin: 175px;
+}
+
+#grad {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 1536px;
+    height: 250px;
+    background-image: linear-gradient( rgba(0, 0, 0, 0.882), rgba(0,0,0,0));
+    margin: 0px 0px;
+}
+#container{
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);;
+    position: absolute;
+    margin-top: 190px;
+    margin-left: 200px;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.496);
+    padding: 50px;
+    border-radius: 8px;
+    text-align: center;
+}
+input{
+    width:  345px;
+    height: 30px;
+    border-radius: 5px;
+}
+button{
+    width: 345px;
+    height: 35px;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 3px;
+    background-image: linear-gradient(to right, rgb(0, 0, 0), rgb(87, 0, 175));
+    color: white;
+    border: none;
+    transition: background-image 0.5s ease, color 0.5s ease, transform 0.5s ease;
+}
+button:hover{
+    color:  rgb(203, 126, 255);
+    transform: scale(1.1);
+}
+a{
+    text-decoration: none;
+    font-size: 18px;
+    color: aliceblue;
+    font-family: 'Trebuchet MS';
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+a:hover{
+    color:   rgb(203, 126, 255);
+    transform: scale(1.2);
+}
+#button2{
+    position: absolute;
+    background-image: linear-gradient(to right, rgb(0, 0, 0), rgb(87, 0, 175));
+    color: white;
+    z-index: 3;
+    margin-top: 30px;
+    margin-left: 200px;
+    width: 120px;
+    height: 50px;
+    box-shadow: 3px;
+    border: none;
+    cursor: pointer;
+    transition: background-image 0.5s ease, color 0.5s ease, transform 0.5s ease;
+}
+#button2:hover{
+    color:  rgb(203, 126, 255);
+    transform: scale(1.1);
+}
+
+input::placeholder{
+    font-family: 'Trebuchet MS';
+    padding: 10px;
+}
