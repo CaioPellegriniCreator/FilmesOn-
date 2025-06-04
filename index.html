@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Filmes On - Home</title>
+  <title>Home</title>
   <link rel="stylesheet" href="Home.css">
    <link rel="icon" type="image/png" href="imagensStreaming/LogoPlayer.png">
 </head>
@@ -14,17 +14,29 @@
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="filmes.html">Filmes</a></li>
-        <li><a href="series.html">Séries</a></li>
-        <li><a href="lancamentos.html">Lançamentos</a></li>
-        <li><a href="minha-lista.html">Minha Lista</a></li>
+        <li><a href="Series.html">Séries</a></li>
+        <li><a href="Releases.html">Lançamentos</a></li>
         <li><a href="sobre.html">Sobre</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-     <div class="container" id="container-filmes">
-    </div>
+  <div id="container-filmes"></div>
+  
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span class="fechar" onclick="fecharModal()">&times;</span>
+    <img id="modal-img">
+    <h2 id="modal-titulo"></h2>
+    <p id="modal-descricao"></p>
+    <p id="modal-genero"></p>
+    <p id="modal-duracao"></p>
+    <p id="modal-votos"></p>
+
+    
+  </div>
+</div>
   </main>
 
   <footer>

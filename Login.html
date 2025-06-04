@@ -19,8 +19,15 @@
         <br><br>
         <a href="index.html">Entre sem fazer login</a>
         <br><br>
-        <button onclick="window.location.href='index.html'">Entrar</button>
+        <button id="entrar">Entrar</button>
     </div>
+
+    <script>
+  document.getElementById("entrar").addEventListener("click", function () {
+    window.location.href = "index.html";
+  });
+</script>
+
     
 </body>
 </html>

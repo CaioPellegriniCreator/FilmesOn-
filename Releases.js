@@ -1,22 +1,6 @@
 const urls = [
-  'https://api.themoviedb.org/3/movie/popular?language=pt-BR&page=1', //Populares
-  'https://api.themoviedb.org/3/movie/upcoming?language=pt-BR&page=1', // Cinema
-  'https://api.themoviedb.org/3/movie/top_rated?language=pt-BR&page=1', //Mais bem avaliadas
-  'https://api.themoviedb.org/3/account/21980634/watchlist/movies?language=pt-BR&page=1&sort_by=created_at.asc',
-  'https://api.themoviedb.org/3/collection/1241?language=pt-BR', //Harry Potter
-  'https://api.themoviedb.org/3/collection/230532?language=pt-BR', //Marley e eu
-  'https://api.themoviedb.org/3/discover/tv?include_adult=false&include_null_first_air_dates=false&language=en-US&page=1&sort_by=popularity.desc', //Lista Séries populares
-  'https://api.themoviedb.org/3/collection/173710?language=pt-BR', //Homem-Aranha
-  'https://api.themoviedb.org/3/collection/86311?language=pt-BR', //Vingadores
-  'https://api.themoviedb.org/3/tv/airing_today?language=pt-BR&page=1', // Indo ao ar hoje
-  'https://api.themoviedb.org/3/tv/on_the_air?language=pt-BR&page=1', //Atualmente estão no ar
-  'https://api.themoviedb.org/3/discover/tv?language=pt-BR&with_genres=18&page=1', // Drama
-  'https://api.themoviedb.org/3/discover/tv?language=pt-BR&with_genres=10765&page=1', //Ficção Científica e fantasia
-  'https://api.themoviedb.org/3/discover/tv?language=pt-BR&sort_by=popularity.desc&with_genres=35&page=1', // Comédia
-  'https://api.themoviedb.org/3/discover/tv?language=pt-BR&sort_by=popularity.desc&with_genres=9648&page=1',// Terror
-  'https://api.themoviedb.org/3/discover/tv?language=pt-BR&sort_by=popularity.desc&with_genres=10751&page=1', //Familia
-  'https://api.themoviedb.org/3/discover/tv?language=pt-BR&sort_by=popularity.desc&with_genres=99&page=1', //Documentário
-  'https://api.themoviedb.org/3/discover/tv?language=pt-BR&sort_by=popularity.desc&with_genres=10759&page=1'//Ação
+    'https://api.themoviedb.org/3/movie/now_playing?language=pt-BR&page=1', //Filmes Lançamentos
+    'https://api.themoviedb.org/3/movie/upcoming?language=pt-BR&page=1'
 
 ];
 
@@ -31,27 +15,10 @@ const options = {
 };
 
 Promise.all(urls.map(url => fetch(url, options).then(res => res.json())))
-  .then(([popularMovies, upcomingMovies, topRatedMovies, watchlist, harryPotter, marley, popularSeries,
-    spiderman, avengers, airingToday, onTheAir, drama, scifi, comedy, mystery, family, documentary, action]) => {
+  .then(([releasesMovies, upcomingMovies]) => {
       const filmes = [
-      ...(popularMovies.results || []),
-      ...(upcomingMovies.results || []),
-      ...(topRatedMovies.results || []),
-      ...(watchlist.results || []),
-      ...(harryPotter.parts || []),
-      ...(marley.parts || []),
-      ...(popularSeries.results || []),
-      ...(spiderman.parts || []),
-      ...(avengers.parts || []),
-      ...(airingToday.results || []),
-      ...(onTheAir.results || []),
-      ...(drama.results || []),
-      ...(scifi.results || []),
-      ...(comedy.results || []),
-      ...(mystery.results || []),
-      ...(family.results || []),
-      ...(documentary.results || []),
-      ...(action.results || [])
+      ...(releasesMovies.results || []),
+      ...(upcomingMovies.results || [])
 ];
 
 

@@ -129,13 +129,12 @@ div img{
   max-height: calc(1.6em * 9);    
   line-height: 1.6;
 }
-#modal-duracao{
+#modal-temporadas{
   position: absolute;
   background-color: #0000008e;
-  padding: 7px;
-  max-width: 600px;
+  padding: 10px;
   margin: 0;
-  margin-left: 434px;
+  margin-left: 370px;
   border-top-right-radius:10px ;
   color: #818181;
 }

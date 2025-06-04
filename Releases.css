@@ -122,7 +122,6 @@ div img{
   justify-content: center;
   text-align: justify;
   display: -webkit-box;
-  -webkit-line-clamp: 9; 
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -133,7 +132,6 @@ div img{
   position: absolute;
   background-color: #0000008e;
   padding: 7px;
-  max-width: 600px;
   margin: 0;
   margin-left: 434px;
   border-top-right-radius:10px ;
